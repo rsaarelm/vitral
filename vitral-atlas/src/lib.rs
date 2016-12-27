@@ -55,6 +55,8 @@ impl<T: Clone> Atlas<T> {
         }
     }
 
+    pub fn is_dirty(&self) -> bool { self.is_dirty }
+
     /// Write the current atlas image to the system texture handle if the atlas has changed.
     ///
     /// The texture update function must be provided by the caller.
