@@ -59,6 +59,8 @@ impl<T: Clone> Atlas<T> {
 
     pub fn size(&self) -> Size2D<u32> { self.atlas.size }
 
+    pub fn texture<'a>(&'a self) -> &'a T { &self.texture }
+
     /// Write the current atlas image to the system texture handle if the atlas has changed.
     ///
     /// The texture update function must be provided by the caller.
